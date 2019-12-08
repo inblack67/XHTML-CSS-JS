@@ -11,23 +11,93 @@
 <body>
     <p>
         <script type="text/javascript">
+        // body -> onload="alert('loaded')" onunload="alert('it\'s not even loaded btich look')"
+
+        var now = new Date();
+        var hrs = now.getHours();
+        var mins = now.getMinutes();
+        var sec = now.getSeconds();
+        document.writeln("Time, she's a wastin " + sec);
+
+        // function saviours()
+        // {
+        //     document.write(" I'm Negan ");
+        // }
+        // setInterval(saviours,1000);
+
+        // var newArr = new Array();
+        // for(i=0;i<4;i++)
+        // {
+        //     var enter = prompt("enter the elements");
+        //     newArr[i] = enter;
+        // }
+
+        // for(i=0; i<4; i++)
+        // {
+        //     document.write(newArr[i]);
+        // }
+
+        var associativeArrays = new Array();
+        associativeArrays["color"] = "red";
+        associativeArrays[0] = "chicken";
+        document.write("here goes pay attention <br/>" + associativeArrays[0] + "<br/>");
+        
         var spn = "John fucking \"Winchester\"";
-        document.write(spn);
-        function funcky()
+        document.write(" spn sums upto " + spn.length);
+
+        function yearsLeft()
         {
-            alert("You don't talk back to me");
+            return (100-28);
+        }
+        function people(name,age)
+        {
+            this.name = name;
+            this.age = age;
+            yearsLeft(age)
+            document.write("<br/> Years left -> " + yearsLeft() + "<br/>");
+        }
+        people("Bucky",27);
+        var arr = new Array("Negan "," Lucille ",67 + "<br/>");
+        arr.join("wives");
+        arr.push(45);
+        arr.sort;
+        for(i=0;i<arr.length;i++)
+        {
+            document.write("<br/>" + i + " -> " + arr[i]);
+        }
+        document.write("<br/>Length of arr -> "+ arr.length + "<br/>");
+        document.write(arr[0] + arr[1] + arr[2]);
+        var arr2 = new Array(); // variable size
+        arr2[0] = "What?";
+        arr2[1] = "Was the joke that bad?";
+        document.write(arr2[0] + " " + arr2[1]);
+        document.write("<br/> Length of arr2 -> " + arr2.length);
+
+        var con = arr.concat(arr2);
+        document.write("<br/>" + con[3]);
+
+        function validator()
+        {
+            if(document.myForm.confirm.checked)
+            alert("yass");
+            else
+            alert("holy crap!");
         }
 
-        function param(x)
-        {
-            document.write("\nYou want " + x + " kills?");
-        }
-        param(47);
-        function add(x,y)
-        {
-            return x+y;
-        }
-        document.write(" \n\tNo I want " + add(57,3));
+        // function funcky()
+        // {
+        //     alert("You don't talk back to me");
+        // }
+
+        // function add(x,y)
+        // {
+        //     return x+y;
+        // }
+        //var bucky = new person();
+        bucky = {name: "<br/> Bucky Roberts ", profession: " Full Stack Developer "};
+        document.write(bucky.name + bucky.profession + " age: " + bucky.age);
+        //document.write(" \n\tNo I want " + add(57,3));
+        document.writeln("<br/>bow down bitches<br/>");
         </script>
     </p>
     <br>
@@ -39,8 +109,8 @@
     <br>So take a damn look.
 </p>
 <p>
-    <h4>You don't kill them</h4>
-    <form>
+    <h4 onmouseover="alert('Today I am not gonna have time to screw up any of my wives today')" onmouseout="alert('I mean, maybe one.')">You don't kill them</h4>
+    <form name="myForm">
         <textarea name="bio" rows="8" cols="46" maxlength="10">unless you try a little</textarea>
         <br>
         <br>
@@ -53,7 +123,9 @@
         <br>
         <br>
 
-        Submit: <input type="submit" value="don't" onclick="funcky()">
+        Submit: <input type="submit" value="don't" onclick="validator()">
+
+        EventHandler <input type="button" value="touch me not" onclick="alert('ah!!')">
     </form>
 
 </p>
